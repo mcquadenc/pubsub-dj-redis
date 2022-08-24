@@ -1,10 +1,15 @@
 # How publish
-```pub.publish_data_on_redis(json.dumps({'message': 'teste msg sent'}), 'notification.new')```
+```
+from pubsub import pub
+import json
+
+pub.publish_data_on_redis(json.dumps({'message': 'teste msg sent'}), 'notification.new')
+```
 
 # How subscribe
 
 ```
-pub.publish_data_on_redis(json.dumps({'message': 'teste msg sent'}), 'notification.new')
+python manage.py subscriber
 ```
 
 or 
